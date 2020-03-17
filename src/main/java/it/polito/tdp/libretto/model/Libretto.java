@@ -10,6 +10,8 @@ import java.util.List;
  *
  */
 public class Libretto {
+	
+	//ciaoooo
 
 	private List<Voto> voti = new ArrayList<>();
 
