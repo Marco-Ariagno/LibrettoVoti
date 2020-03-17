@@ -4,29 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Memorizza e gestisce un insieme di voti superati.
+ * Memorizza e gestisce un insieme di vori superati
  * 
- * @author Fulvio
+ * @author Marco
  *
  */
+
 public class Libretto {
-	
-	//ciaoooo
 
 	private List<Voto> voti = new ArrayList<>();
 
 	/**
-	 * Aggiunge un nuovo voto al libretto
+	 * Aggiunge nuovo voto al libretto
 	 * 
-	 * @param v Voto da aggiungere
+	 * @param v voto da aggiungere
 	 */
 	public void add(Voto v) {
 		this.voti.add(v);
 	}
 
 	/**
-	 * Dato un Libretto, restituisce una stringa nella quale vi sono solamente i
-	 * voti pari al valore specificato
+	 * Dato libretto, restituisce stringa nella quale vi sono solo voti pari a
+	 * quello specificato
 	 * 
 	 * @param voto valore specificato
 	 * @return stringa formattata per visualizzare il sotto-libretto
@@ -42,19 +41,21 @@ public class Libretto {
 	}
 	
 	/**
-	 * Genera un nuovo libretto, a partire da quello esistente,
-	 * che conterrà esclusivamenti i voti con votazione pari a quella specificata.
-	 * @param voto votazione specificata
+	 * Genera nuovo libretto, a partire da quello esistente,
+	 * che conterra' esclusivamente voti con valutazione pari
+	 * a quella specificata
+	 * @param voto voto votazione specificata
 	 * @return nuovo Libretto "ridotto"
 	 */
 	public Libretto estraiVotiUguali(int voto) {
-		Libretto nuovo = new Libretto() ;
-		for(Voto v: this.voti) {
+		Libretto nuovo=new Libretto();
+		for(Voto v:this.voti) {
 			if(v.getVoto()==voto) {
 				nuovo.add(v);
 			}
 		}
-		return nuovo ;
+		//meglio lavorare con oggetti che con stringhe perche' posso farci piu' cose
+		return nuovo;
 	}
 
 	public String toString() {
